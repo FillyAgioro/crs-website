@@ -1,13 +1,16 @@
 @charset "UTF-8";
 
-/* IMPORT */
-
-@import url(/dist/fonts/OpenSans*);
 @import url(/dist/icons/css/iconmonstr-iconic-font.min.css);
+
+@font-face {
+	font-family: "Commissioner";
+	src: url(/dist/fonts/Commissioner-VariableFont_wght.ttf);
+	font-display: swap;
+}
 
 // COLOR PALLET
 
-$bg-color: #bbe1fa;
+$border-color: #bbe1fa;
 $theme-color: #0f4c75;
 $f-color: #1b262c;
 $second-bg-color: #fff;
@@ -20,14 +23,14 @@ $second-bg-color: #fff;
 }
 
 ::selection {
-	background-color: $bg-color;
+	background-color: $border-color;
 	color: $theme-color;
 }
 
 body {
 	font: {
 		size: 100%;
-		family: "Open Sans", sans-serif;
+		family: "Commissioner", sans-serif;
 	}
 
 	color: $f-color;
@@ -35,10 +38,10 @@ body {
 }
 
 .content-body {
-	margin: 1em auto;
+	margin: 0em auto;
 	max-width: 45em;
 	padding: 1em;
-	border: 5px solid $bg-color;
+	border: 5px solid $border-color;
 }
 
 h2,
@@ -58,6 +61,7 @@ h1 {
 
 img {
 	margin: 1em 0;
+	width: 43em;
 	max-width: 100%;
 	filter: sepia(100%) hue-rotate(190deg) saturate(400%);
 }
@@ -113,19 +117,23 @@ a {
 	
 			&:checked:after {
 				content: "#{$button-info}";
-				color: $bg-color;
+				color: $border-color;
 			}
 		}
 	}
 
 	@include checked-buttons("&__shop",
-		"Address",
+		"Shop Address",
 		": To Get Address you have to contact us with given links"
 	);
 	@include checked-buttons("&__home",
-		"Home Repair",
+		"Home Service Available",
 		": To Get Home Repair go to the any given links"
 	);
+}
+
+label {
+	display: none;
 }
 
 /* ABOUT US */
@@ -136,21 +144,23 @@ blockquote {
 	padding: 0.7em;
 }
 
-table {
-	border-collapse: collapse;
-}
-
-th {
-	border: 5px solid $theme-color;
-}
-
-td {
-	border: 5px solid $bg-color;
-}
-
 .about__tweet {
 	font-weight: bold;
 	font-size: 1.1em;
+}
+
+table {
+	border-collapse: collapse;
+	font-weight: 700;
+	width: 43em;
+	max-width: 100%;
+	text-align: center;
+	overflow: scroll;
+}
+
+td {
+	border: 5px solid $border-color;
+	padding: 0;
 }
 
 /* WHATSAPP ICON */
@@ -177,7 +187,7 @@ td {
 
 footer {
 	text-align: center;
-	background-color: $bg-color;
+	background-color: $border-color;
 	color: $f-color;
 	font-weight: 600;
 }

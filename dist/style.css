@@ -1,6 +1,9 @@
-/* IMPORT */
-@import url(/dist/fonts/OpenSans*);
 @import url(/dist/icons/css/iconmonstr-iconic-font.min.css);
+@font-face {
+  font-family: "Commissioner";
+  src: url(/dist/fonts/Commissioner-VariableFont_wght.ttf);
+  font-display: swap;
+}
 /* BODY */
 * {
   margin: 0%;
@@ -14,13 +17,13 @@
 
 body {
   font-size: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Commissioner", sans-serif;
   color: #1b262c;
   line-height: 1.8em;
 }
 
 .content-body {
-  margin: 1em auto;
+  margin: 0em auto;
   max-width: 45em;
   padding: 1em;
   border: 5px solid #bbe1fa;
@@ -42,6 +45,7 @@ h1 {
 
 img {
   margin: 1em 0;
+  width: 43em;
   max-width: 100%;
   filter: sepia(100%) hue-rotate(190deg) saturate(400%);
 }
@@ -89,7 +93,7 @@ a {
   padding: 0em;
 }
 .contact-links__shop:before {
-  content: "Address";
+  content: "Shop Address";
 }
 .contact-links__shop:checked:after {
   content: ": To Get Address you have to contact us with given links";
@@ -104,11 +108,15 @@ a {
   padding: 0em;
 }
 .contact-links__home:before {
-  content: "Home Repair";
+  content: "Home Service Available";
 }
 .contact-links__home:checked:after {
   content: ": To Get Home Repair go to the any given links";
   color: #bbe1fa;
+}
+
+label {
+  display: none;
 }
 
 /* ABOUT US */
@@ -118,21 +126,23 @@ blockquote {
   padding: 0.7em;
 }
 
-table {
-  border-collapse: collapse;
+.about__tweet {
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
-th {
-  border: 5px solid #0f4c75;
+table {
+  border-collapse: collapse;
+  font-weight: 700;
+  width: 43em;
+  max-width: 100%;
+  text-align: center;
+  overflow: scroll;
 }
 
 td {
   border: 5px solid #bbe1fa;
-}
-
-.about__tweet {
-  font-weight: bold;
-  font-size: 1.1em;
+  padding: 0;
 }
 
 /* WHATSAPP ICON */
