@@ -56,28 +56,43 @@ h6 {
 /* HEADER */
 
 h1 {
+	display: inline;
 	color: $theme-color;
-}
-
-img {
-	margin: 1em 0;
-	width: 43em;
-	max-width: 100%;
-	filter: sepia(100%) hue-rotate(190deg) saturate(400%);
-}
-
-.title {
-	clear: both;
-	font-size: 1em;
-	line-height: 2em;
-	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 3.5em;
 }
 
 .im-star-half {
-	float: left;
-	font-size: 3.8em;
-	margin-right: .1em;
+	display: inline;
+	font-size: 3.2em;
+	position: relative;
+	bottom: -5px;
+	font-weight: 600;
 	color: $theme-color;
+}
+
+.title {
+	font-size: 1.8vh;
+	line-height: 2em;
+	text-transform: uppercase;
+	text-align: center;
+
+	&__tag-line {
+	font-weight: 580;
+	font-size: 1.2em;
+	line-height: 1em;
+	word-spacing: .2em;
+	}
+}
+
+img {
+	margin: {
+		top: 2em;
+		bottom: .3em;
+	}
+	width: 43em;
+	max-width: 100%;
+	filter: sepia(100%) hue-rotate(190deg) saturate(400%);
 }
 
 /* CONTACT-LINKS */
@@ -94,9 +109,9 @@ a {
 	&__social-media {
 		background: $theme-color;
 		color: $second-bg-color;
-		padding: 0.3em;
+		padding: 0.4em;
 		font-weight: bold;
-		font-size: 1.4em;
+		font-size: 1.5em;
 		border-radius: 10px;
 		margin: 0.2em;
 		display: inline-block;
@@ -107,7 +122,7 @@ a {
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			appearance: none;
-			font-size: 0.9em;
+			font-size: 1em;
 			font-weight: bold;
 			padding: 0em;
 
